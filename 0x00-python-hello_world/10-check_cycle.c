@@ -2,7 +2,7 @@
 /**
  * check_cycle - checks if theres a loop inside of a linked list
  * @list: a list of links
- * Return: 0, 1
+ * Return: 0 upon success. else, 1
  */
 int check_cycle(listint_t *list)
 {
