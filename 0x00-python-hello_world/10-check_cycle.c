@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 		fas = fas->next->next;
 
 		if (slo == fas)
-			return(0);
+			return (0);
 	}
-	return(1);
+	return (1);
 }
