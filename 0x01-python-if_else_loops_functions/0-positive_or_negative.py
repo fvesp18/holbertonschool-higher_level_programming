@@ -3,7 +3,7 @@
 
 
 import random
-number = random.randint(-10000, 10000)
+number = random.randint(-10, 10)
 
 number_if_pos = "{} is positive"
 number_if_zero = "{} is zero"
