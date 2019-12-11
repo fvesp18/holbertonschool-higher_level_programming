@@ -6,17 +6,17 @@ import random
 number = random.randint(-10000, 10000)
 
 sentence = "Last digit of {0} is {1} {2}"
-ld = number % 10
-five = "and is greater than 5"
-lessthan = "and is less than 6 and not 0"
-zero = "and is 0"
-if ld > 5:
-    print(sentence.format(number, ld, five))
-elif ld == 0:
-    print(sentence.format(number, ld, zero))
+
+if number < 0:
+    ld = number % -10
 else:
-    if number < 0:
-        new = (number * -1) % 10
-        print(sentence.format(number, new, lessthan * -1))
-    else:
-        print(sentence.format(number, new, lessthan))
+    ld = number % 10
+
+if ld is 0:
+    end = "and is 0"
+elif ld < 6 and not 0:
+    end = "and is less than 6 and not 0"
+else:
+    end = "and is greater than 5"
+
+print(sentence.format(number, ld, end))
