@@ -20,4 +20,3 @@ else:
         print(sentence.format(number, new, lessthan * -1))
     else:
         print(sentence.format(number, new, lessthan))
-
