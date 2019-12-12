@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-statment = "{} arguments"
 from sys import argv
 i = 0
 length = len(argv)
