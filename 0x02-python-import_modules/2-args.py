@@ -7,6 +7,11 @@ if __name__ == "__main__":
         length = length - 1
         statement = "{} arguments."
         print(statement.format(length))
+    elif length == 2:
+        length = length - 1
+        statement = "{} argument:"
+        print(statement.format(length))
+        print("{}: {}".format(length, argv[1]))
     elif length > 1:
         length = length - 1
         statement = "{} arguments:"
