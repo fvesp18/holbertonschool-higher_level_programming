@@ -2,7 +2,4 @@
 
 
 def uniq_add(my_list=[]):
-    mlset = set(my_list)
-    uniq = (list(mlset))
-    for i in uniq:
-        return sum(uniq)
+        return sum(list(set(my_list)))
