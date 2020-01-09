@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
-    while value == isinstance(value, int):
+    while isinstance(value, int):
         try:
             print("{:d}".format(value))
             return True
