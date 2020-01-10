@@ -3,10 +3,12 @@
 
 
 class Square:
-    try:
-        def __init__(self, size=0):
-            self.__size = size
-    except TypeError:
-        print("size must be an integer")
-    except ValueError:
-        print("size must be >= 0")
+	def __init__(self, size=0):
+		if size < 0:
+			raise ValueError("size must be >= 0")
+		elif type(size) != int:
+			raise TypeError("size must be an integer")
+		self.__size = size
+
+	def area(self):
+		return self.__size*self.__size
