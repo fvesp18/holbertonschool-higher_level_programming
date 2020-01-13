@@ -4,25 +4,13 @@
 
 def add_integer(a, b=98):
     """
-    RETURNS ADDITION OF A AND B AS INTEGER.
-
-    >>> add_integer(1, 2)
-    3
-    >>> add_integer(100, -2)
-    98
-    >>> add_integer(2)
-    100
-    >>> add_integer(100.3, -2)
-    98
-    >>> add_integer(4, "Holberton")
-    Traceback:
-
-    PARAMETERS: 
-        A: SOME INTEGER
-        B: 98
+    RETURNS THE SUMMATION OF A AND B AS INTEGER
     """
-    if type(a) is not (int, float):
+
+    if isinstance(a, (int, float)) is False:
         raise TypeError("a must be an integer")
-    if type(b) is not (int, float):
-        raise TypeErrpr("b must be an integer")
+    
+    if isinstance(b, (int, float)) is False:
+        raise TypeError("b must be an integer")
+
     return int(a) + int(b)
