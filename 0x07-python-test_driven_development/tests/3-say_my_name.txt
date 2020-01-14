@@ -1,0 +1,23 @@
+===========================================================
+THIS IS A DOCTEST FOR MODULE 3-SAY_MY_NAME
+===========================================================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("Bob")
+My name is Bob 
+
+>>> say_my_name(12, "White")
+first_name must be a string
+
+>>> say_my_name("")
+My name is  
+
+>>> say_my_name(None, "Hello")
+first_name must be a string
