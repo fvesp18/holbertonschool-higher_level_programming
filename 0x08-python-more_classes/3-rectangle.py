@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write a class Rectangle that defines a rectangle by: (based on 0-rectangle.py). """
+""" prints informal representation of object rectangle """
 
 
 class Rectangle:
