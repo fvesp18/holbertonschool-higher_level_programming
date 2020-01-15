@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write a class Rectangle that defines a rectangle by: (based on 0-rectangle.py). """
+""" establish instance for width and height """
 
 
 class Rectangle:
@@ -10,7 +10,7 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if type(value) is not int:
@@ -18,6 +18,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     @property
     def height(self):
         return self.__height
