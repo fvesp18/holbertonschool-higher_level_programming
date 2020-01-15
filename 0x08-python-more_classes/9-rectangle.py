@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" creates public class attribute """
+""" creates classmethod() """
 
 
 class Rectangle:
@@ -70,3 +70,6 @@ class Rectangle:
             return rect_1
         if area_2 > area_1:
             return rect_2
+    @classmethod
+    def square(cls, size=0):
+        return Rectangle(size, size)
