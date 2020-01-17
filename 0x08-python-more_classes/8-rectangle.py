@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" creates public class attribute """
+""" create public class attribute """
 
 
 class Rectangle:
@@ -7,8 +7,8 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         self.number_of_instances += 1
         self.print_symbol
 
@@ -31,7 +31,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) is not int:
-            raise TypeError("height must be an intege")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
@@ -62,15 +62,11 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        area_1 = int(rect_1.area())
-        area_2 = int(rect_2.area())
         if isinstance(rect_1, Rectangle) is False:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if isinstance(rect_2, Rectangle) is False:
             raise TypeError('rect_2 must be an instance of Rectangle')
-        if area_1 == area_2:
+        if rect_1.area() >= rect_2.area():
             return rect_1
-        if area_1 > area_2:
-            return rect_1
-        if area_2 > area_1:
+        elif rect_2.area() > rect_1.area():
             return rect_2
