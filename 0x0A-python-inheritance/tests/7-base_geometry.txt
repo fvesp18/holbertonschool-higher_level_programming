@@ -1,0 +1,24 @@
+===========================================================
+THIS IS A DOCTEST FOR 7. INTEGER VALIDATOR MODULE
+===========================================================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+>>> bg = BaseGeometry()
+
+
+>>> bg.integer_validator("my_int", 12)
+
+
+>>> bg.integer_validator("width", 89)
+
+
+>>> bg.integer_validator("weight", "six")
+[TypeError] weight must be an integer
+
+>>> bg.integer_validator("year", 0)
+[ValueError] year  must be greater than 0
+
+>>> bg.integer_validator("HEIGHT", -7)
+[ValueError] HEIGHT must be greater than 0
