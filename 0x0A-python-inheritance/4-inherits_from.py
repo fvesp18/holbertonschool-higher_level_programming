@@ -3,7 +3,7 @@
 
 
 def inherits_from(obj, a_class):
-    if isinstance(obj, a_class) is True:
+    if not issubclass(a_class, type(obj)):
         return True
     else:
         return False
