@@ -3,6 +3,6 @@
 
 
 def read_file(filename=""):
-    with open('my_file_0.txt', encoding='UTF8') as aFile:
+    with open('my_file_0.txt', 'r') as aFile:
         for aLine in aFile:
-            print('{:}'.format(aLine), end='')
+            print('{}'.format(aLine), end='')
