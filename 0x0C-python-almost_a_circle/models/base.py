@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" create a base class """
+""" creates a base class """
 
 
 class Base:
