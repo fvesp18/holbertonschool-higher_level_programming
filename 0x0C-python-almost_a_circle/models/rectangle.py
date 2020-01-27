@@ -95,7 +95,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ declaration of update """
         if len(args) != 0 and args is not None:
             for position, arg in enumerate(args):
@@ -109,3 +109,16 @@ class Rectangle(Base):
                     self.x = arg
                 if position is 4:
                     self.y = arg
+        else:
+            self.id = kwargs.get("id", self.id)
+            self.height = kwargs.get("height", self.height)
+            self.width = kwargs.get("width", self.width)
+            self.x = kwargs.get("x", self.x)
+            self.y = kwargs.get("y", self.y)
+
+    def to_dictionary(self):
+        """ declaration of to_dictionary """
+        new = {
+                "id": self.id, "width": self.width,
+                "height": self.height, "x": self.x, "y": self.y}
+        return new
