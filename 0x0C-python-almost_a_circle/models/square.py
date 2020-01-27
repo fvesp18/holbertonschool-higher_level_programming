@@ -37,13 +37,13 @@ class Square(Rectangle):
                 if position is 0:
                     self.id = arg
                 if position is 1:
-                    self.__size = arg
+                    self.size = arg
                 if position is 2:
                     self.x = arg
                 if position is 3:
                     self.y = arg
         else:
             self.id = kwargs.get("id", self.id)
-            self.__size = kwargs.get("size", self.__size)
+            self.size = kwargs.get("size", self.__size)
             self.x = kwargs.get("x", self.x)
             self.y = kwargs.get("y", self.y)
