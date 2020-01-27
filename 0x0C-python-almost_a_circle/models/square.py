@@ -9,7 +9,8 @@ class Square(Rectangle):
         """ load vars from Rect """
         self.size = size
         super().__init__(size, size, x, y, id)
-        
+
     def __str__(self):
         """ str decorator """
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size))
+        return ("[Square] ({}) {}/{} - {}"
+                .format(self.id, self.x, self.y, self.size))
