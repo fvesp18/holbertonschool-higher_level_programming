@@ -80,8 +80,15 @@ class Rectangle(Base):
 
     def display(self):
         """ displays rectangle with # """
-        for i in range(self.height):
-            print("#" * self.width)
+        for spaces in range(self.y):
+            print("")
+        for offset in range(self.height):
+            print("", end="")
+            for i in range(self.x):
+                print(" ", end="")
+            for j in range(self.width):
+                print("#", end="")
+            print("")
 
     def __str__(self):
         """ string representation """
