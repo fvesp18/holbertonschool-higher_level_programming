@@ -51,15 +51,7 @@ class Base:
             anInstance.update(**dictionary)
             return anInstance
         if cls.__name__ is "Square":
-            anInstance = cls(1, 1, 1, 1)
+            anInstance = cls(1)
             anInstnace.update(**dictionary)
             return anInstance
-        return anInstance
-
-    @classmethod
-    def load_from_file(cls):
-        if cls.__name__.json is None:
-            return []
-
-        with open("{}.json".format(cls.__name__), w) as someFile:
-            return []
+        return None
