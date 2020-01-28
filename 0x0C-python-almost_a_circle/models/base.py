@@ -35,3 +35,11 @@ class Base:
             aList.append(aLine.to_dictionary())
         with open("{}.json".format(cls.__name__), "w") as aFile:
             aFile.write(cls.to_json_string(aList))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        if json_string is "":
+            return []
+        return json.loads(json_string)
