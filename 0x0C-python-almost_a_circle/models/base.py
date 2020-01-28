@@ -29,8 +29,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """ save to file """
         aList = []
-        if list_objs is None:
+        if not list_objs:
             list_objs = []
+            with open("{}.json".format(cls.__name__), "w") as aFile:
+                aFile.write(list_objs)
+
         for aLine in list_objs:
             aList.append(aLine.to_dictionary())
         with open("{}.json".format(cls.__name__), "w") as aFile:
@@ -55,3 +58,11 @@ class Base:
             anInstnace.update(**dictionary)
             return anInstance
         return anInstance
+
+    @classmethod
+    def load_from_file(cls):
+        if cls.__name__.json is None:
+            return []
+
+        with open("{}.json".format(cls.__name__), w) as someFile:
+            return []
