@@ -50,8 +50,9 @@ class Base:
             anInstance = cls(1, 1)
             anInstance.update(**dictionary)
             return anInstance
-        if cls.__name__ is "Square":
+        elif cls.__name__ is "Square":
             anInstance = cls(1)
             anInstnace.update(**dictionary)
             return anInstance
-        return None
+        else:
+            return None
