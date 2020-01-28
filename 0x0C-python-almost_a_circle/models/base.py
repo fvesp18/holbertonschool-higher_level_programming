@@ -46,13 +46,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ some stuff """
         if cls.__name__ is "Rectangle":
             anInstance = cls(1, 1)
-            anInstance.update(**dictionary)
-            return anInstance
         elif cls.__name__ is "Square":
             anInstance = cls(1)
-            anInstnace.update(**dictionary)
-            return anInstance
         else:
             return None
+        anInstance.update(**dictionary)
+        return anInstance
