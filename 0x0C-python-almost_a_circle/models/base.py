@@ -32,7 +32,7 @@ class Base:
         if list_objs is not None:
             for aLine in list_objs:
                 aList.append(aLine.to_dictionary())
-        
+
         with open("{}.json".format(cls.__name__), "w") as aFile:
             aFile.write(cls.to_json_string(aList))
 
