@@ -27,9 +27,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ save to file """
         aList = []
         if list_objs is None:
-            return []
+            list_objs = []
         for aLine in list_objs:
             aList.append(aLine.to_dictionary())
         with open("{}.json".format(cls.__name__), "w") as aFile:
