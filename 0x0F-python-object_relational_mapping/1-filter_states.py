@@ -11,8 +11,11 @@ if __name__ == '__main__':
             port=3306)
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%';")
-    table = cur.fetchall()
-    for rows in table:
-        print("{}".format(rows))
+    size = cur.execute("SELECT * FROM states;")
+    for rows in range(size):
+        result = cur.fetchone()
+        string = result[1]
+        string = string[:1]
+        if string == 'N':
+            print("{}".format(result))
     db.close()
