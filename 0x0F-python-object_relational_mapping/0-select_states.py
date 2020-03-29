@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Prints all states from a db by ascending id value """
 import MySQLdb
 import sys
 
