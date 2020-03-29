@@ -13,8 +13,8 @@ if __name__ == '__main__':
             )
     cur = db.cursor()
 
-    size = cur.execute("SELECT * FROM states ORDER BY states.id;")
-    for rows in range(size):
-        products = cur.fetchone()
-        print("{}".format(products))
+    cur.execute("SELECT * FROM states ORDER BY states.id;")
+    table = cur.fetchall()
+    for rows in table:
+        print("{}".format(rows))
     db.close()
