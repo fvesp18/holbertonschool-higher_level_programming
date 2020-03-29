@@ -5,11 +5,12 @@ import sys
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
-            "127.0.0.1",
+            "localhost",
             sys.argv[1],
             sys.argv[2],
             sys.argv[3],
-            3306)
+            3306
+            )
     cur = db.cursor()
 
     size = cur.execute("SELECT * FROM states ORDER BY states.id;")
