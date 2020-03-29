@@ -12,7 +12,7 @@ if __name__ == '__main__':
             port=3306)
     cur = db.cursor()
 
-    size = cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
+    size = cur.execute("SELECT * FROM states ORDER BY states.id;")
     for rows in range(size):
         products = cur.fetchone()
         print("{}".format(products))
