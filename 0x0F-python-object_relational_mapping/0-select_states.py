@@ -15,4 +15,4 @@ if __name__ == '__main__':
     table = cur.fetchall()
     for row in table:
         print("{}".format(row))
-    db.close
+    db.close()
