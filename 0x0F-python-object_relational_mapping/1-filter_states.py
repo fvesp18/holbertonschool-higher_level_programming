@@ -1,19 +1,22 @@
 #!/usr/bin/python3
-""" Add some documentation bro """
+""" Prints all states from a db by ascending id value """
 import MySQLdb
 import sys
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
-            host="127.0.0.1",
-            user=sys.argv[1],
-            passwd=sys.argv[2],
-            db=sys.argv[3],
-            port=3306)
+            "localhost",
+            sys.argv[1],
+            sys.argv[2],
+            sys.argv[3],
+            3306
+            )
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%';")
+    cur.execute("SELECT * FROM states ORDER BY states.id;")
     table = cur.fetchall()
     for rows in table:
-        print("{}".format(rows))
+        first_letter = rows[1][:1]
+        if first_letter == 'N':
+            print("{}".format(rows))
     db.close()
