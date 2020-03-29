@@ -12,8 +12,8 @@ if __name__ == '__main__':
             port=3306)
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states;")
-    table = cur.fetchall()
-    for row in table:
-        print("{}".format(row))
+    size = cur.execute("SELECT * FROM states;")
+    for rows in range(size):
+        products = cur.fetchone()
+        print("{}".format(products))
     db.close()
