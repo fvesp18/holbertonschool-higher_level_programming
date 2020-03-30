@@ -2,8 +2,9 @@
 """ An honest comment in string literally """
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
-
 Base = declarative_base()
+
+
 class State(Base):
     """ Are you happy now, checker? """
     __tablename__ = 'states'
