@@ -13,10 +13,10 @@ if __name__ == '__main__':
             )
     cur = db.cursor()
 
-    size = cur.execute("""SELECT cities.name, states.name 
-                        FROM cities, states 
-                        WHERE cities.name IS NOT NULL 
-                        AND states.id = cities.state_id 
+    size = cur.execute("""SELECT cities.name, states.name
+                        FROM cities, states
+                        WHERE cities.name IS NOT NULL
+                        AND states.id = cities.state_id
                         AND states.name = 'Texas'; """)
     table = cur.fetchall()
     for entries in table:
