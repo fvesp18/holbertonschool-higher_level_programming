@@ -19,8 +19,5 @@ if __name__ == '__main__':
                         AND states.id = cities.state_id
                         AND states.name = 'Texas'; """)
     table = cur.fetchall()
-    for entries in table:
-        state = entries[1]
-        if state == sys.argv[4]:
-            print(entries[0])
+    print(', '.join([city[0] for city in table]))
     db.close()
