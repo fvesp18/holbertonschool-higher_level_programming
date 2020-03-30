@@ -1,4 +1,5 @@
 #!/bin/bash/python3
+""" An honest comment in string literally """
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
