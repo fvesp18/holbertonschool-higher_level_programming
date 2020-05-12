@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+// Maaybe this will fix it
 module.exports = class Rectangle {
   constructor (w, h) {
     if ((w <= 0) || (h <= 0)) {
@@ -9,6 +9,7 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     const syb = 'X';
     let row = 0;
