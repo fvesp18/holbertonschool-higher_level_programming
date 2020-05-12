@@ -1,0 +1,32 @@
+#!/usr/bin/node
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if ((w <= 0) || (h <= 0)) {
+      return new Rectangle();
+    } else if ((w >= 1) && (h >= 1)) {
+      this.width = w;
+      this.height = h;
+    }
+  }
+  print () {
+    const syb = 'X';
+    let row = 0;
+    let col = 0;
+    let str = '';
+    for (; row < this.height; row++) {
+      for (; col < this.width; col++) {
+        str += syb;
+      }
+      console.log(str);
+    }
+  }
+  double () {
+	this.width = this.width * 2;
+	this.height = this.height * 2;
+  }
+  rotate () {
+    let temp = this.height;
+    this.heigh = this.width;
+    this.width = temp;
+  }
+};
