@@ -8,6 +8,7 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     const syb = 'X';
     let row = 0;
@@ -20,12 +21,14 @@ module.exports = class Rectangle {
       console.log(str);
     }
   }
+
   double () {
-	this.width = this.width * 2;
-	this.height = this.height * 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
+
   rotate () {
-    let temp = this.height;
+    const temp = this.height;
     this.heigh = this.width;
     this.width = temp;
   }
