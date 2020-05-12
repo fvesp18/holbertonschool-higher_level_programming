@@ -6,8 +6,8 @@ exports.converter = function (base) {
       return base.toString(10);
     };
   } else {
-    return function (base) {
-      return base.toString(16);
+    return function (num) {
+      return num.toString(base);
     };
   }
 };
