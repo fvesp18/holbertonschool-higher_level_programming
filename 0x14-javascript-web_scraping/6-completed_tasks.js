@@ -14,10 +14,11 @@ req.get(url, function (err, r, cont) {
     const len = tmp.length;
     while (init < len) {
       if (tmp[init].completed) {
-        if (!(tmp[init].userId in op)) {
-          op[tmp[init].userId] = 0;
-        }
-        op[tmp[init].userId] += 1;
+        if (tmp[init].userId in op) {
+          op[tmp[init].userId] += 1;
+        } else { 
+        op[tmp[init].userId] = 1;
+	}
       }
       init += 1;
     }
