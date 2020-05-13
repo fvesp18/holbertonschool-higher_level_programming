@@ -8,8 +8,8 @@ req.get(url, function (err, r, cont) {
   if (err) {
     console.log(err);
   } else {
-    let op = {};
     let init = 0;
+    const op = {};
     const tmp = JSON.parse(cont);
     const len = tmp.length;
     while (init < len) {
