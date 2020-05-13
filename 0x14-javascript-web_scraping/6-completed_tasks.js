@@ -4,7 +4,7 @@ const req = require('request');
 const allArgs = process.argv.slice(2);
 const url = allArgs[0];
 
-req.get(url, function (err, r, cont) {
+req.get(url, (err, r, cont) => {
   if (err) {
     console.log(err);
   } else {
