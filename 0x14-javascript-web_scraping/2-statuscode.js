@@ -4,9 +4,7 @@ const url = allArgs[0];
 const req = require('request');
 
 req.get(url, function (err, resp) {
-  if (err) {
-    console.log(err);
-  } else if (err || resp) {
+  if (err || resp) {
     console.log('code:', resp.statusCode);
   }
 });
