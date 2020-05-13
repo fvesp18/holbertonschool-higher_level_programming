@@ -4,9 +4,7 @@ const fs = require('fs');
 const fn = allArgs[0];
 const str = allArgs[1];
 
-console.log(str);
-
-fs.writeFile(fn, str, (err, fd) => {
+fs.writeFile(fn, str, 'utf-8', (err) => {
   if (err) {
     console.log(err);
   }
