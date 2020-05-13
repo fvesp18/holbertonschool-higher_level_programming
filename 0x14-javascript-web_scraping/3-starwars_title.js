@@ -5,9 +5,9 @@ const id = allArgs[0];
 const url = 'https://swapi-api.hbtn.io/api/films/';
 
 req.get(url + id, function (err, r, cont) {
-	if (err) {
-		console.log(err);
-	} else {
-		console.log(JSON.parse(cont).title);
-	}
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(JSON.parse(cont).title);
+  }
 });
