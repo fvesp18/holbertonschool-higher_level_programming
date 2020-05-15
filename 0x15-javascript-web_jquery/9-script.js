@@ -1,4 +1,4 @@
 #!/usr/bin/node
-$.get("https://fourtonfish.com/hellosalut/?lang=fr", function( data ) {
-	$('#hello').text( data.hello );	
+$.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data) {
+  $('#hello').text(data.hello);
 });
